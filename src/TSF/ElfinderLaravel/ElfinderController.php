@@ -40,7 +40,8 @@ class ElfinderController extends \BaseController {
                     'path'          => public_path().DIRECTORY_SEPARATOR.$dir,  // path to files (REQUIRED)
                     'URL'           => asset($dir),                             // URL to files (REQUIRED)
                     'accessControl' => \Config::get('elfinder-laravel::access'), // filter callback (OPTIONAL)
-                    'tmbPath'       => 'thumbs'
+                    'tmbPath'       => '.thumbs',
+                    'tmbSize'       => 100,
                 )
             );
         }
